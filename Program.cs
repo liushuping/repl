@@ -1,12 +1,21 @@
 ﻿using System;
 
-namespace ConsoleApplication
+namespace Repl
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                var input = Console.ReadLine();
+                Evaluate(input);
+            }
+        }
+
+        public static void Evaluate(string input)
+        {
+            Console.WriteLine(input); // echo
         }
     }
 }
